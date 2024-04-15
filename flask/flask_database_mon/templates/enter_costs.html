@@ -13,9 +13,9 @@
     <form action="/submit_cost" method="post" class="mt-3">
         <div class="form-group">
             <label for="name">Who paid?</label>
-            <select class="form-control" id="name" name="user_id" required>
-                {% for user in users %}
-                <option value="{{ user.id }}">{{ user.real_name }}</option>
+            <select class="form-control" id="name" name="name" required>
+                {% for participant in participants %}
+                <option>{{ participant.real_name }}</option>
                 {% endfor %}
             </select>
         </div>
